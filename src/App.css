@@ -1,38 +1,119 @@
+/* Basic App Container */
 .App {
   text-align: center;
+  font-family: 'Arial', 'Noto Sans', sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Headings */
+h1 {
+  font-size: 24px;
+  color: #2e7d32;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2 {
+  font-size: 20px;
+  color: #388e3c;
+  margin-top: 30px;
+}
+
+/* Paragraphs and Labels */
+p, label {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Select Dropdown */
+select {
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+/* Data Display Container */
+.DataDisplay {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Container (for react-chartjs-2) */
+.ChartContainer {
+  margin: 20px 0;
+  max-width: 100%;
+  height: 300px;
+}
+
+/* Buttons or Interactive Elements */
+button {
+  font-size: 18px;
+  padding: 12px 20px;
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p, label, select {
+    font-size: 16px;
+  }
+  .DataDisplay {
+    padding: 15px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Accessibility: High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .App {
+    background-color: #fff;
+    color: #000;
+  }
+  select, button {
+    border: 2px solid #000;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Loading/Error Messages */
+.Loading, .Error {
+  font-size: 18px;
+  color: #ff5722;
+  margin: 20px 0;
 }
